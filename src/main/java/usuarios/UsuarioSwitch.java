@@ -1,43 +1,41 @@
 package usuarios;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class UsuarioSwitch {
-	
-	public static void mostrar(){
-		Scanner leerEntradaTeclado = new Scanner(System.in);
-		String opcion = "0";
-		
-		// Aca estamos importando al usuario.
-		Usuario [] arrayUsuarios = new Usuario[100];
-		int contador = 0;
-	do {
+
+	public static ArrayList<Usuario> usuariosArrayList = new ArrayList<Usuario>();
+
+	public static void mostrar() {
+		Scanner entradaTeclado = new Scanner(System.in);
+		int opcion = 0;
+		do {
 			UsuarioMenu.mostrarMenu();
-			// Eligiendo una opcion
-			opcion = leerEntradaTeclado.nextLine();
-		
+			opcion = Integer.parseInt(entradaTeclado.nextLine());
 			switch (opcion) {
-				case "1":
-					arrayUsuarios = UsuarioRegistrar.registrar(arrayUsuarios, contador);
-					contador = UsuarioRegistrar.contadorStatic;
+				case 1:
+					UsuarioRegistrar.registrar(usuariosArrayList);
 					break;
-				case "2":
-					UsuarioMostrar.mostrar(arrayUsuarios, contador);
+				case 2:
+					UsuarioMostrar.mostrar(usuariosArrayList);
 					break;
-				case "3":
-					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array 
+				case 3:
+					UsuarioEliminar.eliminar(usuariosArrayList);
 					break;
-				case "4":
-					System.out.println("Entroo Editar");
+				case 4:
+					UsuarioEditar.editar(usuariosArrayList);
 					break;
-				case "5":
-					System.out.println("Entroo Salir");
+				case 5:
+					System.out.println("Salio de Adm. Usuarios");
 					break;
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		}while(!opcion.equals("5"));
+		} while (opcion != (5));
+	}
 
+	public static ArrayList<Usuario> getArrayUsuarios() {
+		return usuariosArrayList;
 	}
 }

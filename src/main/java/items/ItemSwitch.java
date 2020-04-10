@@ -1,41 +1,41 @@
 package items;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class ItemSwitch {
-	
-	public static void mostrar(){
-		Scanner leerEntradaTeclado = new Scanner(System.in);
-		String opcion = "0";
-		Item [] arrayItems = new Item[100];
-		int contador = 0;
-	do {
+
+	public static ArrayList<Item> itemsArrayList = new ArrayList<Item>();
+
+	public static void mostrar() {
+		Scanner entradaTeclado = new Scanner(System.in);
+		int opcion = 0;
+		do {
 			ItemMenu.mostrarMenu();
-			// Eligiendo una opcion
-			opcion = leerEntradaTeclado.nextLine();
-		
+			opcion = Integer.parseInt(entradaTeclado.nextLine());
 			switch (opcion) {
-				case "1":
-					arrayItems = ItemRegistrar.registrar(arrayItems, contador);
-					contador = ItemRegistrar.contadorStatic;
+				case 1:
+					ItemRegistrar.registrar(itemsArrayList);
 					break;
-				case "2":
-					ItemMostrar.mostrar(arrayItems, contador);
+				case 2:
+					ItemMostrar.mostrar(itemsArrayList);
 					break;
-				case "3":
-					System.out.println("Entroo Eliminar");
-					// Eliminar un elemento array 
+				case 3:
+					ItemEliminar.eliminar(itemsArrayList);
 					break;
-				case "4":
+				case 4:
 					System.out.println("Entroo Editar");
 					break;
-				case "5":
-					System.out.println("Entroo Salir");
+				case 5:
+					System.out.println("salio de Adm. Items");
 					break;
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		}while(!opcion.equals("5"));
+		} while (opcion != (5));
+	}
 
+	public static ArrayList<Item> getArrayItems() {
+		return itemsArrayList;
 	}
 }
