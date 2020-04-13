@@ -7,6 +7,7 @@ import usuarios.Usuario;
 import usuarios.UsuarioSwitch;
 import items.Item;
 import items.ItemSwitch;
+import menu.PedirOpcion;
 
 public class VentaSwitch {
 
@@ -20,10 +21,12 @@ public class VentaSwitch {
 		ArrayList<Item> arrayItems = ItemSwitch.getArrayItems();
 
 		do {
+			// Menu
 			VentaMenu.mostrarMenu();
-			// Eligiendo una opcion
+			// Try Catch
+			opcion = PedirOpcion.mostrar();
+			// Entrada teclado
 			opcion = Integer.parseInt(entradaTeclado.nextLine());
-
 			switch (opcion) {
 				case 1:
 					arrayVentas = VentaRegistrar.registrar(arrayVentas, arrayUsuarios);
@@ -43,7 +46,7 @@ public class VentaSwitch {
 				default:
 					System.out.println("Opcion Incorrecta");
 			}
-		} while (opcion != (4));
+		} while (opcion != (5));
 	}
 
 	public static ArrayList<Venta> getArrayVenta() {

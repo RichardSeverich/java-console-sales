@@ -8,20 +8,21 @@ public class Login {
 		Scanner entrada = new Scanner(System.in);
 		String nickname = "";
 		String contrasena = "";
-
+		System.out.println("*******INICIO DE SESION*******");
+		System.out.println("");
 		do {
 			System.out.println("Ingresa nickname de usuario");
 			nickname = entrada.nextLine();
 			System.out.println("Ingrese la contrasena");
 			contrasena = entrada.nextLine();
 
-			if (nickname.equalsIgnoreCase("admin") && contrasena.equalsIgnoreCase("admin123")) {
+			if (nickname.equalsIgnoreCase("micky") && contrasena.equalsIgnoreCase("micky123")) {
 				System.out.println("nickname y contrasena correcto");
 			} else {
 				System.out.println("usuario o contraseña incorrecto");
 			}
 
-		} while (!nickname.equalsIgnoreCase("admin") || !contrasena.equalsIgnoreCase("admin123"));
+		} while (!nickname.equalsIgnoreCase("micky") || !contrasena.equalsIgnoreCase("micky123"));
 
 	}
 

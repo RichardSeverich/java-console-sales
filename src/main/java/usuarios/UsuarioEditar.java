@@ -8,10 +8,15 @@ public class UsuarioEditar {
 	public static ArrayList<Usuario> editar(ArrayList<Usuario> arrayUsuarios) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		int tamano = arrayUsuarios.size();
+		System.out.println("*******EDICION DE USUARIOS*******");
+		System.out.println("");
 		System.out.println("ingrese el indice que desea editar");
 		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
-		if (ind < tamano) {
+		if (ind < tamano && ind >= 0) {
 			Usuario usuario = new Usuario();
+			// nickname
+			System.out.println("Ingrese el nickname de usuario");
+			usuario.nickname = leerEntradaTeclado.nextLine();
 			// Nombres
 			System.out.println("Ingrese el nombre Usuario");
 			usuario.nombres = leerEntradaTeclado.nextLine();

@@ -8,7 +8,8 @@ import usuarios.Usuario;
 public class VentaRegistrar {
 	public static ArrayList<Venta> registrar(ArrayList<Venta> arrayVentas, ArrayList<Usuario> arrayUsuarios) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
-		System.out.println("******** Ventas Registrar *********");
+		System.out.println("******* VENTAS REGISTRAR *******");
+		System.out.println("");
 		// obteniendo fecha
 		System.out.println("Ingrese fecha de venta: ");
 		String fecha = leerEntradaTeclado.nextLine();

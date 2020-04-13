@@ -8,6 +8,8 @@ public class UsuarioEliminar {
 	public static ArrayList<Usuario> eliminar(ArrayList<Usuario> arrayUsuarios) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		int tam = arrayUsuarios.size();
+		System.out.println("*******ELIMINACION DE USUARIOS*******");
+		System.out.println("");
 		System.out.println("ingrese el indice que desea eliminar");
 		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
 		if (ind < tam) {

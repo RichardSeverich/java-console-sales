@@ -9,7 +9,8 @@ public class VentaItemRegistrar {
 
 	public static void registrar(ArrayList<Item> arrayItems, ArrayList<Venta> arrayVentas) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
-		System.out.println("******** Ventas Registrar *********");
+		System.out.println("******** VENTAS REGISTRAR ITEM *********");
+		System.out.println("");
 		// Obteniendo indice de la venta
 		System.out.println("ingrese indice de la venta");
 		int indVenta = Integer.parseInt(leerEntradaTeclado.nextLine());

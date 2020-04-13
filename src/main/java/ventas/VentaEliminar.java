@@ -8,6 +8,8 @@ public class VentaEliminar {
 	public static ArrayList<Venta> eliminar(ArrayList<Venta> arrayVentas) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		int tam = arrayVentas.size();
+		System.out.println("******* ELIMINACION DE VENTAS *******");
+		System.out.println("");
 		System.out.println("ingrese el indice que desea eliminar");
 		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
 		if (ind < tam) {

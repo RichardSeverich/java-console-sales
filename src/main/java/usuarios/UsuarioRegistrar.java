@@ -7,11 +7,18 @@ public class UsuarioRegistrar {
 
 	// public static int contadorStatic;
 
-	public static void registrar(ArrayList<Usuario> usuariosArrayList) {
+	public static ArrayList<Usuario> registrar(ArrayList<Usuario> usuariosArrayList) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
-		System.out.println("Entroo Registrar ");
+		System.out.println("*******REGISTRO DE USUARIOS*******");
+		System.out.println("");
 		// Añadir usuario
 		Usuario usuario = new Usuario();
+		// nickname
+		System.out.println("Ingrese el nickname de usuario");
+		usuario.nickname = leerEntradaTeclado.nextLine();
+		// password
+		System.out.println("Ingrese la contrasena");
+		usuario.password = leerEntradaTeclado.nextLine();
 		// Nombres
 		System.out.println("Ingrese el nombre Usuario");
 		usuario.nombres = leerEntradaTeclado.nextLine();
@@ -26,5 +33,7 @@ public class UsuarioRegistrar {
 		usuario.tipo = leerEntradaTeclado.nextLine();
 
 		usuariosArrayList.add(usuario);
+
+		return usuariosArrayList;
 	}
 }

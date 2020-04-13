@@ -8,6 +8,8 @@ public class ItemEliminar {
 	public static ArrayList<Item> eliminar(ArrayList<Item> arrayItems) {
 		Scanner leerEntradaTeclado = new Scanner(System.in);
 		int tam = arrayItems.size();
+		System.out.println("*******ELIMINACION DE ITEMS*******");
+		System.out.println("");
 		System.out.println("ingrese el indice que desea eliminar");
 		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
 		if (ind < tam) {
