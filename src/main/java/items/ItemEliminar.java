@@ -1,20 +1,26 @@
 package items;
 
-import java.util.Scanner;
+import contenedores.ItemsList;
+import herramientas.PedirNumero;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ItemEliminar {
 
-	public static ArrayList<Item> eliminar(ArrayList<Item> arrayItems) {
-		Scanner leerEntradaTeclado = new Scanner(System.in);
-		int tam = arrayItems.size();
-		System.out.println("ingrese el indice que desea eliminar");
-		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
-		if (ind < tam) {
-			arrayItems.remove(ind);
-			System.out.println("se elimino el indice indicado");
-		}
-		System.out.println("elemento seleccionado inexistente");
-		return arrayItems;
-	}
+  /**Metodo.*/
+  public static void eliminar() {
+    ArrayList<Item> itemsArrayList = ItemsList.itemsArrayList;
+    Scanner leerEntradaTeclado = new Scanner(System.in);
+    int tam = itemsArrayList.size();
+    System.out.println("*******ELIMINACION DE ITEMS*******");
+    System.out.println("");
+    System.out.println("ingrese el indice que desea eliminar");
+    int ind = PedirNumero.pedir();
+    if (ind <= tam) {
+      itemsArrayList.remove(ind - 1);
+      System.out.println("se elimino el indice indicado");
+    } else {
+      System.out.println("elemento seleccionado inexistente");
+    }
+  }
 }
