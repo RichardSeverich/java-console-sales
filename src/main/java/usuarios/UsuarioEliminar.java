@@ -1,22 +1,26 @@
 package usuarios;
 
-import java.util.Scanner;
+import contenedores.UsuariosList;
+import herramientas.PedirNumero;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class UsuarioEliminar {
 
-	public static ArrayList<Usuario> eliminar(ArrayList<Usuario> arrayUsuarios) {
-		Scanner leerEntradaTeclado = new Scanner(System.in);
-		int tam = arrayUsuarios.size();
-		System.out.println("*******ELIMINACION DE USUARIOS*******");
-		System.out.println("");
-		System.out.println("ingrese el indice que desea eliminar");
-		int ind = Integer.parseInt(leerEntradaTeclado.nextLine());
-		if (ind < tam) {
-			arrayUsuarios.remove(ind);
-			System.out.println("se elimino el indice indicado");
-		}
-		System.out.println("elemento seleccionado inexistente");
-		return arrayUsuarios;
-	}
+  /**Metodo.*/
+  public static void eliminar() {
+    ArrayList<Usuario> usuariosArrayList = UsuariosList.usuariosArrayList;
+    Scanner leerEntradaTeclado = new Scanner(System.in);
+    int tam = usuariosArrayList.size();
+    System.out.println("*******ELIMINACION DE USUARIOS*******");
+    System.out.println("");
+    System.out.println("ingrese el indice que desea eliminar");
+    int ind = PedirNumero.pedir();
+    if (ind <= tam) {
+      usuariosArrayList.remove(ind - 1);
+      System.out.println("se elimino el indice indicado");
+    } else {
+      System.out.println("elemento seleccionado inexistente");
+    }
+  }
 }

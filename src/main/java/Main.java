@@ -1,10 +1,18 @@
+import items.ItemPredeterminado;
 import login.Login;
 import menu.Switch;
+import usuarios.UsuarioPredeterminado;
+import usuarios.UsuarioSwitch;
+import ventas.VentaPredeterminada;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Login.mostrar();
-		Switch.mostrar();
-	}
+  /**Metodo.*/
+  public static void main(String[] args) {
+    UsuarioPredeterminado.registrar();
+    ItemPredeterminado.registrar();
+    VentaPredeterminada.registrar();
+    Login.mostrar();
+    Switch.mostrar();
+  }
 }

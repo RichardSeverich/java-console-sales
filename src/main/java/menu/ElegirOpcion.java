@@ -1,35 +1,38 @@
 package menu;
 
+import herramientas.LimpiarPantalla;
+import herramientas.PedirNumero;
+import items.ItemSwitch;
 import java.util.Scanner;
 import usuarios.UsuarioSwitch;
-import items.ItemSwitch;
 import ventas.VentaSwitch;
 
 public class ElegirOpcion {
 
-	public static int mostrar() {
-		// Eligiendo una opcion
-		Scanner entradaTeclado = new Scanner(System.in);
-		int opcion = 0;
-		opcion = Integer.parseInt(entradaTeclado.nextLine());
-
-		switch (opcion) {
-			case 1:
-				UsuarioSwitch.mostrar();
-				break;
-			case 2:
-				ItemSwitch.mostrar();
-				break;
-			case 3:
-				VentaSwitch.mostrar();
-				break;
-			case 4:
-				System.out.println("Programa terminado");
-				entradaTeclado.close();
-				break;
-			default:
-				System.out.println("Opcion Incorrecta");
-		}
-		return opcion;
-	}
+  /**Metodo.*/
+  public static int mostrar() {
+    Scanner entradaTeclado = new Scanner(System.in);
+    int opcion = 0;
+    opcion = PedirNumero.pedir();
+    LimpiarPantalla.limpiar();
+    switch (opcion) {
+      case 1:
+        UsuarioSwitch.mostrar();
+        break;
+      case 2:
+        ItemSwitch.mostrar();
+        break;
+      case 3:
+        VentaSwitch.mostrar();
+        break;
+      case 4:
+        System.out.println("Programa terminado");
+        break;
+      default:
+        System.out.println("Opcion Incorrecta");
+    }
+    System.out.println("Precione enter para continuar");
+    entradaTeclado.nextLine();
+    return opcion;
+  }
 }

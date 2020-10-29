@@ -1,21 +1,19 @@
 package menu;
 
-import java.util.Scanner;
+import herramientas.LimpiarPantalla;
+import herramientas.PedirNumero;
 
 public class Switch {
 
-	public static void mostrar() {
-		Scanner entradaTeclado = new Scanner(System.in);
-		int opcion = 0;
-		do {
-			// Menu
-			Menu.mostrar();
-			// try catch opcion numerica
-			opcion = PedirOpcion.mostrar();
-			// Switch
-			opcion = ElegirOpcion.mostrar();
-		} while (opcion != (4));
-
-	}
-
+  /**Metodo.*/
+  public static void mostrar() {
+    int opcion = 0;
+    do {
+      // Menu
+      LimpiarPantalla.limpiar();
+      Menu.mostrar();
+      // Switch
+      opcion = ElegirOpcion.mostrar();
+    } while (opcion != (4));
+  }
 }
