@@ -20,19 +20,19 @@ Este proyecto es modo consola.
 ### Diagrama Casos de Uso
 
 <p align="center">
-  <img src="documentacion/diagrama-de-casos-de-uso.jpg">
+  <img src="documentation/diagrama-de-casos-de-uso.jpg">
 </p>
 
 ### Diagrama de clases generico
 
 <p align="center">
-  <img src="documentacion/diagrama-de-clases.jpg">
+  <img src="documentation/diagrama-de-clases.jpg">
 </p>
 
 ### Diagrama de clases de entidades
 
 <p align="center">
-  <img src="documentacion/diagrama-de-clases-solo-entidades.jpg">
+  <img src="documentation/diagrama-de-clases-solo-entidades.jpg">
 </p>
 
 ## UI
@@ -40,47 +40,47 @@ Este proyecto es modo consola.
 ### Login
 
 <p align="center">
-  <img src="documentacion/ui-login.jpg">
+  <img src="documentation/ui-login.jpg">
 </p>
 
 ### Main menu
 
 <p align="center">
-  <img src="documentacion/menu-principal.jpg">
+  <img src="documentation/menu-principal.jpg">
 </p>
 
 ### Users menu
 
 <p align="center">
-  <img src="documentacion/menu-usuarios.jpg">
+  <img src="documentation/menu-usuarios.jpg">
 </p>
 
 ### Show users
 
 <p align="center">
-  <img src="documentacion/mostrar-usuarios.jpg">
+  <img src="documentation/mostrar-usuarios.jpg">
 </p>
 
 ### Items menu
 
 <p align="center">
-  <img src="documentacion/menu-items.jpg">
+  <img src="documentation/menu-items.jpg">
 </p>
 
 ### Show items
 
 <p align="center">
-  <img src="documentacion/mostrar-items.jpg">
+  <img src="documentation/mostrar-items.jpg">
 </p>
 
 ### Sales menu
 
 <p align="center">
-  <img src="documentacion/menu-ventas.jpg">
+  <img src="documentation/menu-ventas.jpg">
 </p>
 
 ### Show sales
 
 <p align="center">
-  <img src="documentacion/mostrar-ventas.jpg">
+  <img src="documentation/mostrar-ventas.jpg">
 </p>
